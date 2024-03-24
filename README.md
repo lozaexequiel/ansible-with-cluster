@@ -12,6 +12,7 @@ This directory contains the configuration files for Ansible provisioner and is b
 		- [Change to the directory](#change-to-the-directory)
 		- [Start the provisioner](#start-the-provisioner)
 		- [Provision custom machines](#provision-custom-machines)
+		- [Destroy the provisioned machines and create them again](#destroy-the-provisioned-machines-and-create-them-again)
 		- [Stop the provisioned machines](#stop-the-provisioned-machines)
 		- [Destroy the provisioned machines](#destroy-the-provisioned-machines)
 		- [Test the provisioner](#test-the-provisioner)
@@ -66,6 +67,8 @@ vagrant provision
 If you want to run the provisioner again resetting the configuration you can use the following command:
 
 ```vagrant up --provision``` or ```vagrant reload --provision```
+
+### Destroy the provisioned machines and create them again
 
 If the custom configuration is not working you can delete the machine and create it again with the new configuration using the following command
 
