@@ -1,6 +1,6 @@
 # Ansible Provisioner
 
-This directory contains the configuration files for Ansible provisioner.
+This directory contains the configuration files for Ansible provisioner and is based on the main repository [Provisioner](
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This directory contains the configuration files for Ansible provisioner.
 	- [Variables](#variables)
 		- [Global Variables](#global-variables)
 		- [Ansible variables](#ansible-variables)
-		- [Ansible version](#ansible-version)
+		- [Ansible playbooks](#ansible-playbooks)
 	- [Ansible documentation](#ansible-documentation)
 
 ## Prerequisites
@@ -41,7 +41,7 @@ To use this provisioner you need to clone the repository:
 
 Change to the directory of the provisioner:
 
-```cd ansible-with-cluster/Ansible```
+```cd ansible-with-cluster```
 
 ### Start the provisioner
 
@@ -145,22 +145,19 @@ The following variables are used by Ansible provisioner:
 | REMOTE_TMP | Remote temporary directory | /vagrant_data/.env/.ansible/.tmp/ansible-${USER} |
 | BECOME_USER | Become user | root |
 | ROLES_PATH | Roles path | /vagrant_data/.env/.ansible/.tmp/roles |
+| ANSIBLE_VERSION | Ansible version | 2.9.6 |
 
 You can change the values in the environment file.
 
-### Ansible version
+### Ansible playbooks
 
-If you want an specific version of Ansible you can change the following variable in the environment file:
+The Ansible playbooks are located in the following directory:
 
-```ANSIBLE_VERSION=<version>```
-
-Default playbooks path is `/vagrant_data/playbooks` but you can change it in the environment file.
+```/vagrant_data/playbooks```
 
 ## Ansible documentation
 
 The Ansible full documentation can be found in [Ansible website](https://docs.ansible.com/ansible/latest/index.html)
-
----
 
 [Back to top](#ansible-provisioner)
 
