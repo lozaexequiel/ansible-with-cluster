@@ -1,6 +1,6 @@
 # Ansible Provisioner
 
-This directory contains the configuration files for Ansible provisioner and is based on the main repository [Provisioner](
+This directory contains the configuration files for Ansible provisioner and is based on the main repository [Provisioner](https://github.com/lozaexequiel/provisioner).
 
 ## Table of Contents
 
@@ -35,25 +35,33 @@ To use this project you need to have the following software installed:
 
 To use this provisioner you need to clone the repository:
 
-```git clone https://github.com/lozaexequiel/ansible-with-cluster```
+~~~bash
+git clone https://github.com/lozaexequiel/ansible-with-cluster
+~~~
 
 ### Change to the directory
 
 Change to the directory of the provisioner:
 
-```cd ansible-with-cluster```
+~~~bash
+cd ansible-with-cluster
+~~~
 
 ### Start the provisioner
 
 To use this provisioner you need to run the following command:
 
-```vagrant up```
+~~~bash
+vagrant up
+~~~
 
 ### Provision custom machines
 
 After you provision the machines you can use the following command to run the provisioner again with the new configuration:
 
-```vagrant provision```
+~~~bash
+vagrant provision
+~~~
 
 If you want to run the provisioner again resetting the configuration you can use the following command:
 
@@ -61,7 +69,9 @@ If you want to run the provisioner again resetting the configuration you can use
 
 If the custom configuration is not working you can delete the machine and create it again with the new configuration using the following command
 
-```vagrant destroy -f && vagrant up```
+~~~bash
+vagrant destroy -f && vagrant up
+~~~
 
 This command will delete all the data in the virtual machine not the configuration files or data in the host machine and create the machine again with the new configuration.
 
@@ -69,13 +79,17 @@ This command will delete all the data in the virtual machine not the configurati
 
 To stop the machines you can use the following command:
 
-```vagrant halt```
+~~~bash
+vagrant halt
+~~~
 
 ### Destroy the provisioned machines
 
 To destroy the provisioner you can use the following command:
 
-```vagrant destroy -f```
+~~~bash
+vagrant destroy -f
+~~~
 
 Please note that this command will delete all the data in the virtual machine not the configuration files or data in the host machine.
 
@@ -83,7 +97,9 @@ Please note that this command will delete all the data in the virtual machine no
 
 To test the provisioner you can use the following command:
 
-```vagrant ssh ansible -c "./vagrant_data/testAnsibleConnection.sh"```
+~~~bash
+vagrant ssh ansible -c "./vagrant_data/testAnsibleConnection.sh"
+~~~
 
 This command will test the connection to the provisioned machines and will show after all the machines were provisioned to execute manually the Ansible command.
 
